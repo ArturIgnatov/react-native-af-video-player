@@ -4,9 +4,9 @@ import {
   View,
   Platform,
   StyleSheet,
-  Slider as RNSlider
 } from 'react-native'
-import Slider from 'react-native-slider'
+import Slider from '@react-native-community/slider'
+
 
 const styles = StyleSheet.create({
   container: {
@@ -43,7 +43,7 @@ const Scrubber = (props) => {
           trackClickable
         />
       :
-        <RNSlider
+        <Slider
           style={styles.slider}
           onValueChange={val => onSeek(val)}
           onSlidingComplete={val => onSeekRelease(val)}
